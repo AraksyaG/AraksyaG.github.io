@@ -3,70 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name — Resume</title>
-  <meta name="description" content="Short one-line summary about you (e.g., Data Analyst and CS student based in Yerevan)." />
-  <meta name="author" content="Your Name" />
-  <meta property="og:title" content="Your Name — Resume" />
-  <meta property="og:description" content="Short one-line summary about you." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://username.github.io/" />
+  <title>Araksya Gevorgyan — Resume</title>
+  <meta name="description" content="Data Science student with strong skills in Python, R, SQL and mathematics." />
+  <meta name="author" content="Araksya Gevorgyan" />
   <meta name="theme-color" content="#0ea5e9" />
   <style>
     :root{
-      --bg:#E6F0FA; /* pastel blue background */
+      --bg:#E6F0FA;
       --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#0ea5e9;
-      --code:#111827; --shadow:0 8px 20px rgba(0,0,0,.06);
-      --max: 1000px;
+      --shadow:0 8px 20px rgba(0,0,0,.06); --max:1000px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";color:var(--ink);background:var(--bg)}
-
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color:var(--ink); background:var(--bg)}
     .wrap{max-width:var(--max);margin:32px auto;padding:0 20px}
     .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
-    @media (max-width: 860px){.grid{grid-template-columns:1fr}}
-
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
     aside{position:sticky;top:24px;align-self:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
     main{display:flex;flex-direction:column;gap:24px}
-
     header h1{font-size:28px;line-height:1.2;margin:0 0 6px}
     header p.role{margin:0;color:var(--muted)}
-
     .contact{display:grid;gap:10px;margin:18px 0}
     .contact a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
     .contact a:hover{color:var(--accent)}
-    .icon{width:18px;height:18px;flex:0 0 18px}
-
     nav ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
     nav a{display:block;padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:#fafafa}
     nav a:hover{border-color:var(--accent)}
-
     section.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
     h2{font-size:20px;margin:0 0 14px}
-
     .item{margin:14px 0}
     .item h3{margin:0 0 4px;font-size:16px}
     .meta{color:var(--muted);font-size:14px}
     ul.bul{margin:8px 0 0 18px}
-
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fafafa}
-
     .btnbar{display:flex;gap:8px;margin-top:14px}
     .btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
     .btn:hover{border-color:var(--accent)}
-
     footer{color:var(--muted);text-align:center;margin:20px 0}
-
-    /* Print styles */
-    @media print{
-      body{background:#fff}
-      .wrap{max-width:900px;margin:0;padding:0}
-      .grid{display:block}
-      aside{position:static;box-shadow:none}
-      section.card{box-shadow:none}
-      .btnbar, nav{display:none}
-    }
+    @media print{body{background:#fff}.wrap{max-width:900px;margin:0;padding:0}.grid{display:block}aside{position:static;box-shadow:none}section.card{box-shadow:none}.btnbar, nav{display:none}}
   </style>
 </head>
 <body>
@@ -74,25 +49,24 @@
     <div class="grid">
       <aside>
         <header>
-          <h1>Your Name</h1>
-          <p class="role">Your Role / Title</p>
+          <h1>Araksya Gevorgyan</h1>
+          <p class="role">Data Science Student</p>
         </header>
 
         <div class="contact">
-          <a href="mailto:you@example.com">📧 you@example.com</a>
-          <a href="tel:+37400000000">📞 +374 00 000 000</a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:araksyagevorgyan2005@gmail.com">📧 araksyagevorgyan2005@gmail.com</a>
+          <a href="tel:+37496743389">📞 +374 96 74 33 89</a>
+          <a href="https://www.linkedin.com/in/araksya-gevorgyan-600744274/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AraksyaG" target="_blank">GitHub</a>
           <a href="#" aria-label="Location">📍 Yerevan, Armenia</a>
         </div>
 
         <nav aria-label="Sections">
           <ul>
             <li><a href="#summary">Summary</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects / Work Experience</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#skills">Technical Knowledge</a></li>
           </ul>
         </nav>
 
@@ -103,61 +77,93 @@
 
       <main>
         <section id="summary" class="card">
-          <h2>Summary</h2>
-          <p>One concise paragraph (3–4 sentences) highlighting who you are, your key strengths, and what roles you’re aiming for. Mention your techs or domains.</p>
+          <h2>Professional Summary</h2>
+          <p>Data science student with strong skills in Python, R, SQL and mathematics. Worked on different data analysis projects for the past 2 years. Experienced in data analysis, decision-making and reporting. Currently focused on expanding knowledge in Machine Learning (ML) and Artificial Intelligence (AI).</p>
         </section>
 
         <section id="projects" class="card">
-          <h2>Projects</h2>
+          <h2>Work Experience / Recent Projects</h2>
+
           <div class="item">
-            <h3>Project Name</h3>
-            <div class="meta"><a href="https://github.com/yourusername/project" target="_blank" rel="noopener">github.com/yourusername/project</a></div>
+            <h3>Armenian News YouTube Channel Analysis</h3>
+            <div class="meta">July 2025</div>
             <ul class="bul">
-              <li>What the project does and the outcome (users, stars, benchmarks).</li>
-              <li>Tech stack and your specific contributions.</li>
+              <li>Designed and implemented a complete ETL pipeline to process YouTube video metadata from XML files into a PostgreSQL database.</li>
+              <li>Used psycopg2 for Python to handle connections, transactions, and batch inserts.</li>
+              <li>Created materialized views and optimized SQL queries for faster data retrieval and aggregation.</li>
+              <li>Visualized view trends and content performance over time using Python.</li>
+              <li>Identified upload patterns and growth metrics to assess channel strategy and engagement.</li>
+              <li>Delivered a final analysis/report summarizing key findings.</li>
             </ul>
           </div>
-        </section>
 
-        <section id="experience" class="card">
-          <h2>Experience</h2>
           <div class="item">
-            <h3>Job Title — Company</h3>
-            <div class="meta">Jan 2024 – Present · Yerevan (Hybrid)</div>
+            <h3>Gender Wage Gap in Armenia</h3>
+            <div class="meta">Mar 2025 - May 2025</div>
             <ul class="bul">
-              <li>Quantifiable impact statement (e.g., Improved build pipeline reducing CI time by 35%).</li>
-              <li>Ownership/leadership/tech keywords.</li>
-              <li>Tools/stack used.</li>
+              <li>Cleaned, processed, and analyzed a government-approved dataset.</li>
+              <li>Performed exploratory data analysis using visualizations to identify trends and outliers.</li>
+              <li>Developed and applied statistical models alongside hypothesis and independence tests for decision-making.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Data Cleaning Intern - Stamina Outsourcing Company</h3>
+            <div class="meta">Jun 2024 - Aug 2024</div>
+            <ul class="bul">
+              <li>Structured and cleaned datasets to ensure accuracy and efficiency in analysis.</li>
+              <li>Provided support for tasks requiring Excel expertise, including data entry.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Researcher - National Geographic Society + The Nature Conservancy</h3>
+            <div class="meta">Feb 2024 - Apr 2024</div>
+            <ul class="bul">
+              <li>Participated in weekly meetings with industry leaders to gain insights and gather requirements on global water conservation challenges.</li>
+              <li>Conducted comprehensive research on water-related issues in Armenia, analyzing regional data to identify key factors contributing to local water scarcity.</li>
+              <li>Synthesized research findings into a compelling story map using ArcGIS technology.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3>Co-author - “Accident Analysis and Prevention” Journal</h3>
+            <div class="meta">Nov 2023 - June 2024</div>
+            <ul class="bul">
+              <li>Collected data in Yerevan.</li>
+              <li>Contributed to finalizing the statistics using computer models.</li>
             </ul>
           </div>
         </section>
 
         <section id="education" class="card">
           <h2>Education</h2>
+        
           <div class="item">
             <h3>
-              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/American_University_of_Armenia_logo.png/220px-American_University_of_Armenia_logo.png" alt="AUA" style="width:20px; vertical-align:middle; margin-right:6px;">
-              American University of Armenia
+              <a href="https://aua.am" target="_blank" title="American University of Armenia">
+                <img src="https://aua.am/favicon.ico" alt="AUA Icon" class="company-icon">
+              </a>
+              Bachelor of Science in Data Science — American University of Armenia
+              <span>2023 - 2027</span>
             </h3>
-            <div class="meta">2019 – 2023 · Major / GPA (optional)</div>
+            <div class="meta">Major: Data Science</div>
           </div>
         </section>
 
+
         <section id="skills" class="card">
-          <h2>Skills</h2>
-          <div class="skills">
-            <span class="pill">Python</span>
-            <span class="pill">NumPy</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">SQL</span>
-            <span class="pill">Git</span>
-            <span class="pill">Docker</span>
-            <span class="pill">HTML/CSS/JS</span>
-          </div>
+          <h2>Technical Knowledge</h2>
+          <p><strong>Languages:</strong> Python, R, SQL</p>
+          <p><strong>Libraries/Analytics Tools:</strong> Pandas, NumPy, Matplotlib, psycopg2, Power BI</p>
+          <p><strong>Databases:</strong> PostgreSQL</p>
+          <p><strong>Other:</strong> Hypothesis Testing, Statistics and Probability, Data structures, Data Cleaning, Data visualization, Reporting, Git, GitHub, Advanced Excel</p>
+          <h3>Soft Skills</h3>
+          <p>Analytical thinking, Problem-solving, Communication, Teamwork, Adaptability, Attention to detail, Time management, Creativity</p>
         </section>
 
         <footer>
-          <small>© Your Name • Last updated <span id="upd"></span></small>
+          <small>© Araksya Gevorgyan • Last updated <span id="upd"></span></small>
         </footer>
       </main>
     </div>
