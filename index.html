@@ -32,11 +32,23 @@
     }
     header.top-header h1{margin:0;font-size:36px;}
     header.top-header p.role{margin:5px 0;font-size:18px;color:var(--muted);}
+    
     .contacts{margin:10px 0; display:flex; justify-content:center; flex-wrap:wrap; gap:15px;}
     .contacts a{display:flex; align-items:center; gap:6px; color:var(--ink);}
     .contacts .icon{width:18px;height:18px;}
 
-    .summary{margin-top:15px; font-size:16px; max-width:800px; margin-left:auto;margin-right:auto;}
+    .summary-box{
+      background:#FFFFFF;
+      border:1px solid var(--line);
+      padding:20px;
+      border-radius:12px;
+      max-width:900px;
+      margin:15px auto 35px;
+      text-align:left;
+      font-size:16px;
+      line-height:1.5;
+      box-shadow:var(--shadow);
+    }
 
     /* Two big grids */
     .grid-main{
@@ -85,7 +97,6 @@
     }
 
     footer{text-align:center;color:var(--muted); margin:30px 0;}
-
   </style>
 </head>
 <body>
@@ -94,7 +105,7 @@
     <!-- Top header -->
     <header class="top-header">
       <h1>Araksya Gevorgyan</h1>
-      <p class="role">Data Science Student at <a href="https://aua.am" target="_blank"><img src="https://aua.am/favicon.ico" class="edu-icon" alt="AUA Icon">AUA</a></p>
+      <p class="role">Data Science Student at AUA</p>
 
       <div class="contacts">
         <a href="mailto:araksyagevorgyan2005@gmail.com">
@@ -115,8 +126,8 @@
         </a>
       </div>
 
-      <div class="summary">
-        Data science student with strong skills in Python, R, SQL, and mathematics. Experienced in data analysis projects and expanding knowledge in Machine Learning and AI.
+      <div class="summary-box">
+        Data science student with strong skills in Python, R, SQL and mathematics. Worked on different data analysis projects for the past 2 years. Experienced in data analysis, decision-making and reporting. Currently focused on expanding knowledge in Machine Learning (ML) and Artificial Intelligence (AI).
       </div>
     </header>
 
@@ -131,15 +142,21 @@
             <h3>Armenian News YouTube Channel Analysis</h3>
             <div class="meta">July 2025</div>
             <ul class="bul">
-              <li>Designed and implemented ETL pipeline into PostgreSQL</li>
-              <li>Optimized SQL queries and visualized data trends</li>
+              <li>Designed and implemented a complete ETL pipeline to process YouTube video metadata from XML files into a PostgreSQL database.</li>
+              <li>Used psycopg2 for Python to handle connections, transactions, and batch inserts.</li>
+              <li>Created materialized views and optimized SQL queries for faster data retrieval and aggregation.</li>
+              <li>Visualized view trends and content performance over time using Python.</li>
+              <li>Identified upload patterns and growth metrics to assess channel strategy and engagement.</li>
+              <li>Delivered a final analysis/report summarizing key findings.</li>
             </ul>
           </div>
           <div class="item">
             <h3>Gender Wage Gap in Armenia</h3>
             <div class="meta">Mar 2025 - May 2025</div>
             <ul class="bul">
-              <li>Data cleaning, EDA, and statistical modeling</li>
+              <li>Cleaned, processed, and analyzed a government-approved dataset.</li>
+              <li>Performed exploratory data analysis using visualizations to identify trends and outliers.</li>
+              <li>Developed and applied statistical models alongside hypothesis and independence tests for the final decision-making.</li>
             </ul>
           </div>
         </section>
@@ -147,25 +164,28 @@
         <section id="experience" class="card">
           <h2>Work Experience</h2>
           <div class="item">
-            <h3>Data Cleaning Intern — Stamina Outsourcing</h3>
+            <h3>Data Cleaning Intern — Stamina Outsourcing Company</h3>
             <div class="meta">Jun 2024 - Aug 2024</div>
             <ul class="bul">
-              <li>Structured and cleaned datasets</li>
-              <li>Provided Excel-based support for analysis tasks</li>
+              <li>Structured and cleaned datasets to ensure accuracy and efficiency in analysis.</li>
+              <li>Provided support for tasks requiring Excel expertise, including data entry.</li>
             </ul>
           </div>
           <div class="item">
-            <h3>Researcher — NatGeo + The Nature Conservancy</h3>
+            <h3>Researcher — National Geographic Society + The Nature Conservancy</h3>
             <div class="meta">Feb 2024 - Apr 2024</div>
             <ul class="bul">
-              <li>Conducted regional water scarcity analysis and story mapping</li>
+              <li>Participated in weekly meetings with industry leaders to gain insights and gather requirements into global water conservation challenges.</li>
+              <li>Conducted comprehensive research on water-related issues in Armenia, analyzing regional data to identify key factors contributing to local water scarcity and potential strategies.</li>
+              <li>Synthesized research findings into a compelling story map using ArcGIS technology.</li>
             </ul>
           </div>
           <div class="item">
             <h3>Co-author — “Accident Analysis and Prevention” Journal</h3>
             <div class="meta">Nov 2023 - June 2024</div>
             <ul class="bul">
-              <li>Data collection and statistical contributions</li>
+              <li>Collected data in Yerevan.</li>
+              <li>Contributed to finalizing the statistics by using the given computer models.</li>
             </ul>
           </div>
         </section>
@@ -177,12 +197,11 @@
           <h2>Education</h2>
           <div class="item">
             <h3>
-              <a href="https://aua.am" target="_blank">
-                <img src="https://aua.am/favicon.ico" alt="AUA Icon" class="edu-icon">
-              </a>
-              Bachelor of Science in Data Science — American University of Armenia
-              <span>2023 - 2027</span>
+              <img src="https://aua.am/favicon.ico" alt="AUA Icon" class="edu-icon">
+              American University of Armenia
             </h3>
+            <div>Bachelor of Science in Data Science / GPA 3.95</div>
+            <div>2023 - 2027</div>
           </div>
         </section>
 
@@ -195,7 +214,7 @@
             <span class="pill">SQL</span>
           </div>
           <div class="tech-category">
-            <strong>Libraries/Tools:</strong>
+            <strong>Libraries/Analytics Tools:</strong>
             <span class="pill">Pandas</span>
             <span class="pill">NumPy</span>
             <span class="pill">Matplotlib</span>
@@ -209,12 +228,43 @@
           <div class="tech-category">
             <strong>Other:</strong>
             <span class="pill">Hypothesis Testing</span>
-            <span class="pill">Statistics</span>
-            <span class="pill">Data Visualization</span>
+            <span class="pill">Statistics and Probability</span>
+            <span class="pill">Data Structures</span>
             <span class="pill">Data Cleaning</span>
-            <span class="pill">Git / GitHub</span>
-            <span class="pill">Advanced Excel</span>
+            <span class="pill">Data Visualization</span>
+            <span class="pill">Clear Reporting</span>
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">Advanced Microsoft Excel</span>
+          </div>
+
+          <h2>Soft Skills</h2>
+          <div class="skills">
+            <span class="pill">Analytical Thinking</span>
+            <span class="pill">Problem Solving</span>
+            <span class="pill">Communication</span>
+            <span class="pill">Teamwork</span>
+            <span class="pill">Adaptability</span>
+            <span class="pill">Attention to Detail</span>
+            <span class="pill">Time Management</span>
+            <span class="pill">Creativity</span>
           </div>
         </section>
+      </div>
 
-        <section id="softskills
+    </div>
+
+    <footer>
+      <small>© Araksya Gevorgyan • Last updated <span id="upd"></span></small>
+    </footer>
+
+  </div>
+
+  <script>
+    (function(){
+      var el = document.getElementById('upd');
+      if(el){ el.textContent = new Date(document.lastModified).toLocaleDateString(); }
+    })();
+  </script>
+</body>
+</html>
