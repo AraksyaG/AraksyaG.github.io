@@ -1,118 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><!-- TODO: replace --> Your Name — Resume</title>
+  <meta name="description" content="<!-- TODO: replace --> Short one‑line summary about you (e.g., Data Analyst and CS student based in Yerevan)." />
+  <meta name="author" content="<!-- TODO: replace --> Your Name" />
+  <meta property="og:title" content="<!-- TODO: replace --> Your Name — Resume" />
+  <meta property="og:description" content="<!-- TODO: replace --> Short one‑line summary about you." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://username.github.io/" />
+  <meta name="theme-color" content="#0ea5e9" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #E6F0FA; /* pastel blue */
-      color: #333;
+    :root{
+      --bg:#f7f7f8; --card:#ffffff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#0ea5e9;
+      --code:#111827; --shadow:0 8px 20px rgba(0,0,0,.06);
+      --max: 1000px;
     }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";color:var(--ink);background:var(--bg)}
 
-    header {
-      background: #4A90E2;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
+    .wrap{max-width:var(--max);margin:32px auto;padding:0 20px}
+    .grid{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    @media (max-width: 860px){.grid{grid-template-columns:1fr}}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+    aside{position:sticky;top:24px;align-self:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+    main{display:flex;flex-direction:column;gap:24px}
 
-    header p {
-      margin: 0.3rem 0;
-    }
+    header h1{font-size:28px;line-height:1.2;margin:0 0 6px}
+    header p.role{margin:0;color:var(--muted)}
 
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+    .contact{display:grid;gap:10px;margin:18px 0}
+    .contact a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+    .contact a:hover{color:var(--accent)}
+    .icon{width:18px;height:18px;flex:0 0 18px}
 
-    section h2 {
-      color: #4A90E2;
-      border-bottom: 2px solid #E6F0FA;
-      padding-bottom: 0.5rem;
-    }
+    nav ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:8px}
+    nav a{display:block;padding:8px 10px;border-radius:10px;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:#fafafa}
+    nav a:hover{border-color:var(--accent)}
 
-    .project, .experience, .education {
-      margin-bottom: 1.2rem;
-    }
+    section.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+    h2{font-size:20px;margin:0 0 14px}
 
-    .education img {
-      width: 20px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+    .item{margin:14px 0}
+    .item h3{margin:0 0 4px;font-size:16px}
+    .meta{color:var(--muted);font-size:14px}
+    ul.bul{margin:8px 0 0 18px}
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #4A90E2;
-      color: white;
-      margin-top: 2rem;
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fafafa}
+
+    .btnbar{display:flex;gap:8px;margin-top:14px}
+    .btn{appearance:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+    .btn:hover{border-color:var(--accent)}
+
+    footer{color:var(--muted);text-align:center;margin:20px 0}
+
+    /* Print styles */
+    @media print{
+      body{background:#fff}
+      .wrap{max-width:900px;margin:0;padding:0}
+      .grid{display:block}
+      aside{position:static;box-shadow:none}
+      section.card{box-shadow:none}
+      .btnbar, nav{display:none}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Araksya Gevorgyan</h1>
-    <p>Email: araksyagevorgyan2005@gmail.com</p>
-    <p>Phone: +374 96 74 33 89</p>
-    <p>GitHub: <a href="https://github.com/AraksyaG" style="color:white;">github.com/AraksyaG</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/araksya-gevorgyan-600744274/" style="color:white;">www.linkedin.com/in/araksya-gevorgyan-600744274/</a></p>
-  </header>
+  <div class="wrap">
+    <div class="grid">
+      <aside>
+        <header>
+          <h1><!-- TODO: replace --> Your Name</h1>
+          <p class="role"><!-- TODO: replace --> Your Role / Title</p>
+        </header>
 
-  <!-- Projects first -->
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title 1</h3>
-      <p>Short description of what the project is about, technologies used, and outcome.</p>
-    </div>
-    <div class="project">
-      <h3>Project Title 2</h3>
-      <p>Another short description of a project, what problem it solves, and your role.</p>
-    </div>
-  </section>
+        <div class="contact">
+          <a href="mailto:you@example.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg> you@example.com</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.7-1.3 2.4-2.7 5-2.7 5.3 0 6.3 3.5 6.3 8.1V24h-5V16.2c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24H8z"/></svg> LinkedIn</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.9 2.2 2.9 1.6.1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.5 1.2-3.4-.1-.3-.5-1.6.1-3.4 0 0 1-.3 3.5 1.3 1-.3 2.1-.4 3.2-.4s2.2.2 3.2.4c2.5-1.6 3.5-1.3 3.5-1.3.6 1.8.2 3.1.1 3.4.8.9 1.2 2.1 1.2 3.4 0 4.5-2.7 5.5-5.2 5.8.4.3.7.9.7 1.9v2.8c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg> GitHub</a>
+          <a href="#" aria-label="Location"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> <!-- TODO: replace --> Yerevan, Armenia</a>
+        </div>
 
-  <!-- Experience next -->
-  <section>
-    <h2>Experience</h2>
-    <div class="experience">
-      <h3><!-- TODO: replace --> Job Title — Company</h3>
-        <div class="meta">Jan 2025 – Feb 2025 · Yerevan </div>
-        <ul class="bul">
-        <li><!-- TODO: replace --> Structured and cleaned datasets to ensure accuracy and efficiency in analysis</li>
-        <li><!-- TODO: replace --> Provided support for tasks requiring Excel expertise, including data entry</li>
-        </ul>
-    </div>
-  </section>
+        <nav aria-label="Sections">
+          <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
 
-  <!-- Education -->
-  <section>
-    <h2>Education</h2>
-    <div class="education">
-      <h3>
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/79/American_University_of_Armenia_logo.png/220px-American_University_of_Armenia_logo.png" alt="AUA">
-        American University of Armenia
-      </h3>
-      <h3><!-- TODO: replace --> BSc, American University of Armenia</h3>
-      <div class="meta">2023 – 2027 · Data Science / GPA 3.95/4.00</div>
-    </div>
-  </section>
+        <div class="btnbar">
+          <button class="btn" onclick="window.print()">Print / Save PDF</button>
+        </div>
+      </aside>
 
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
-  </footer>
+      <main>
+        <section id="summary" class="card">
+          <h2>Summary</h2>
+          <p><!-- TODO: replace --> One concise paragraph (3–4 sentences) that highlights who you are, your key strengths, and what roles you’re aiming for. Mention the techs or domains you’re strongest in.</p>
+        </section>
+
+        <section id="experience" class="card">
+          <h2>Experience</h2>
+
+          <div class="item">
+            <h3><!-- TODO: replace --> Job Title — Company</h3>
+            <div class="meta">Jan 2024 – Present · Yerevan (Hybrid)</div>
+            <ul class="bul">
+              <li><!-- TODO: replace --> Quantifiable impact statement (e.g., Improved build pipeline reducing CI time by 35%).</li>
+              <li><!-- TODO: replace --> Ownership/leadership/tech keywords.</li>
+              <li><!-- TODO: replace --> Tools/stack used.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <h3><!-- TODO: replace --> Earlier Role — Organization</h3>
+            <div class="meta">Sep 2022 – Dec 2023 · Remote</div>
+            <ul class="bul">
+              <li><!-- TODO: replace --> Delivered X for Y users/customers; maintained Z% uptime.</li>
+              <li><!-- TODO: replace --> Collaborated with cross‑functional teams; mentored N interns.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="education" class="card">
+          <h2>Education</h2>
+          <div class="item">
+            <h3><!-- TODO: replace --> BSc / MSc, University Name</h3>
+            <div class="meta">2019 – 2023 · Major / GPA (optional)</div>
+          </div>
+        </section>
+
+        <section id="skills" class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <!-- TODO: replace -->
+            <span class="pill">Python</span>
+            <span class="pill">NumPy</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">SQL</span>
+            <span class="pill">Git</span>
+            <span class="pill">Docker</span>
+            <span class="pill">HTML/CSS/JS</span>
+          </div>
+        </section>
+
+        <section id="projects" class="card">
+          <h2>Projects</h2>
+          <div class="item">
+            <h3><!-- TODO: replace --> Project Name</h3>
+            <div class="meta"><a href="https://github.com/yourusername/project" target="_blank" rel="noopener">github.com/yourusername/project</a></div>
+            <ul class="bul">
+              <li><!-- TODO: replace --> What the project does and the outcome (users, stars, benchmarks).</li>
+              <li><!-- TODO: replace --> Tech stack and your specific contributions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <footer>
+          <small>© <!-- TODO: replace --> Your Name • Last updated <span id="upd"></span></small>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Update the "Last updated" label with the page's last modified date
+    (function(){
+      var el = document.getElementById('upd');
+      if(el){ el.textContent = new Date(document.lastModified).toLocaleDateString(); }
+    })();
+  </script>
 </body>
 </html>
+
